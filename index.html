@@ -1,11 +1,8 @@
 ---
 ---
-<h1>Posts</h1>
-<ul>
+<article>
     {% for post in site.posts %}
-        <li>
-            <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%Y-%m-%d" }}</time> —
-            <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
-        </li>
+        <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
+        <small><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%-d %B %Y" }}</time></small>
     {% endfor %}
-</ul>
+</article>

@@ -1,0 +1,111 @@
+/* Fonts */
+@font-face {
+  font-family: "BaskervillePunch";
+  src: url("../fonts/BaskervillePunch-Text.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "BaskervillePunch";
+  src: url("../fonts/BaskervillePunch-TextItalic.woff2") format("woff2");
+  font-weight: 400;
+  font-style: italic;
+}
+
+/* Reset */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/*Base*/
+
+html {
+    font: 150% / calc(11ex / 4) "BaskervillePunch";
+    color: #222;
+    font-size-adjust: .5;
+    --measure: 20.45rem;
+    --space: calc(7ex / 4);
+}
+
+body {
+    padding: var(--space) var(--space) calc(1lh + var(--space));
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2lh var(--space);
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+body > header {
+    position: sticky;
+    top: var(--space);
+}
+
+main {
+    width: 100%;
+    max-width: var(--measure);
+}
+
+h1, h2, h3 {
+    font: inherit;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+strong {
+    font-weight: inherit;
+    font-variant-caps: all-small-caps;
+}
+
+small {
+    font-size: .75rem;
+    line-height: calc(4ex / 3 + 1ex);
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #999;
+    text-decoration: none;
+}
+
+/*Globals*/
+
+header  a {
+    text-decoration: none;
+}
+
+/*Article compoenets*/
+
+article {
+    hyphens: auto;
+}
+
+article > * + * {
+    padding-top: 1lh;
+}
+
+article h1 + small,
+article h2 + small {
+    display: block;
+    padding-block-start: .23rem;
+}
+
+article > ul {
+    list-style-type: none;
+}
+
+article li {
+    padding-inline-start: 1lh;
+    text-indent: -1lh;
+}

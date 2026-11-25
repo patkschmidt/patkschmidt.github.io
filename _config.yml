@@ -4,7 +4,7 @@
 title: Patrick Schmidt
 
 # set up clean urls (without '.html')
-permalink: /:title/
+permalink: /:title
 
 defaults:
   # give everything in /posts the `post` layout
