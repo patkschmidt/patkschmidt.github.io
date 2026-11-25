@@ -1,0 +1,21 @@
+# Global setup and options
+
+# Give your site a name
+title: Patrick Schmidt
+
+# set up clean urls (without '.html')
+permalink: /:title/
+
+defaults:
+  # give everything in /posts the `post` layout
+  - scope:
+        path: ""
+        type: "posts"
+    values:
+        layout: "posts"
+  # give all other pages the default layout
+  - scope:
+        path: ""
+        type: "pages"
+    values:
+        layout: "default"
